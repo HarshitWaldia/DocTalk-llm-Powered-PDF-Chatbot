@@ -53,9 +53,12 @@ if uploaded_file:
 
 import time
 
-prompt1 = st.text_input("Enter Your Question From Documents")
+# Create a form for the search input and button
+with st.form(key='search_form'):
+    prompt1 = st.text_input("Enter Your Question From Documents")
+    submit_button = st.form_submit_button(label='Search')
 
-if st.button("Search"):
+if submit_button:
     if uploaded_file is not None and prompt1:
         document_chain = create_stuff_documents_chain(llm, prompt)
         retriever = FAISS.from_texts(vector_store, GoogleGenerativeAIEmbeddings(model="models/embedding-001")).as_retriever()
