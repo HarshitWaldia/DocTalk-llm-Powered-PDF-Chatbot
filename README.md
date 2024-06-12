@@ -26,13 +26,20 @@ Ensure you have Python installed. Recommended version: Python 3.8 or higher.
     cd doctalk
     ```
 
-2. **Install the required dependencies:**
+2. **Create virtual environment:**
+
+    ```sh
+    conda create -p venv python==3.12
+    conda activate venv/
+    ```
+
+3. **Install the required dependencies:**
 
     ```sh
     pip install -r requirements.txt
     ```
 
-3. **Set up environment variables:**
+4. **Set up environment variables:**
 
     Create a `.env` file in the root directory and add your API keys:
 
@@ -41,13 +48,13 @@ Ensure you have Python installed. Recommended version: Python 3.8 or higher.
     GOOGLE_API_KEY=your_google_api_key
     ```
 
-4. **Run the application:**
+5. **Run the application:**
 
     ```sh
     streamlit run Main.py
     ```
 
-5. **Upload your PDF and start chatting!**
+6. **Upload your PDF and start chatting!**
 
 ## 📚 Project Structure
 
